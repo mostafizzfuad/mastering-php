@@ -91,3 +91,22 @@ for($i=0; $i<=100; $i+=9) {
     echo $i;
     echo PHP_EOL;
 }
+
+
+
+echo PHP_EOL;
+echo PHP_EOL;
+
+
+//////// ****** fibonacci series 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233 ****** /////////
+
+$first = 0;
+$second = 1;
+$fibo = 1;
+
+for($i=0; $i<10; $i++) {
+    echo $first. " ";
+    $fibo = $first + $second;
+    $first = $second;
+    $second = $fibo;
+}
