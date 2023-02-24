@@ -78,3 +78,107 @@ function sum2(int ...$number):int {
 }
 $result = sum2(10,20,30,40,50,25);
 echo $result;
+
+
+echo PHP_EOL;
+echo PHP_EOL;
+
+
+//////// ****** Dividing a large function into smaller parts ****** /////////
+
+function dotaskA() {
+    echo "Task A Done\n";
+}
+function dotaskB() {
+    echo "Task B Done\n";
+}
+function dotaskC() {
+    echo "Task C Done\n";
+}
+function dotaskD() {
+    echo "Task D Done\n";
+}
+
+function doTheLargerTask() {
+    doTaskA();
+    doTaskB();
+    doTaskC();
+    doTaskD();
+}
+
+doTheLargerTask();
+
+
+
+echo PHP_EOL;
+echo PHP_EOL;
+
+
+//////// ****** print 1 to 10 using recursive function ****** /////////
+
+function print1To10(int $number) {
+    if($number > 10) {
+        return;
+    } 
+    echo $number." ";
+    $number++;
+    print1To10($number);
+}
+print1To10(1);
+
+echo PHP_EOL;
+echo PHP_EOL;
+
+//////// ****** print Mth to Nth number using recursive function ****** /////////
+
+function printMToN(int $start, int $end) {
+    if($start > $end) {
+        return;
+    } 
+    echo $start." ";
+    $start++;
+    printMToN($start, $end);
+}
+printMToN(26,43);
+
+
+echo PHP_EOL;
+echo PHP_EOL;
+
+//////// ****** print Mth to Nth number using recursive function ****** /////////
+
+function printStep(int $start, int $end, int $step=1) {
+    if($start > $end) { //break out of loop
+        return;
+    } 
+    echo $start." ";
+    $start += $step;
+    printStep($start, $end, $step);
+}
+printStep(25,43,5);
+
+
+
+echo PHP_EOL;
+echo PHP_EOL;
+
+//////// ****** print fibonacci series using recursive function ****** /////////
+
+function fibonacciSeries($old, $new, $end) {
+    static $start;
+    $start = $start ?? 1;
+
+    if($start > $end) { //break out of loop
+        return;
+    } 
+    $start++;
+    
+    echo $old." ";
+    $_temp = $old + $new;
+    $old = $new;
+    $new = $_temp;
+
+    fibonacciSeries($old, $new, $end);
+}
+
+fibonacciSeries(0, 1, 15);
