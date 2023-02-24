@@ -182,3 +182,20 @@ function fibonacciSeries($old, $new, $end) {
 }
 
 fibonacciSeries(0, 1, 15);
+
+
+echo PHP_EOL;
+echo PHP_EOL;
+
+
+//////// ****** factorial using recursive function ****** /////////
+
+function factorialUsingRecursive($n) {
+    if($n <= 1) { //break out of loop
+        return 1;
+    } 
+    return $n * factorial($n - 1);
+    factorialUsingRecursive($n);
+}
+
+echo factorialUsingRecursive(5);
