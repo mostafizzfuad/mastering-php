@@ -76,22 +76,14 @@ echo "\n\n";
 // echo and printf() [direct print kore]
 $name = "Mostafizur";
 echo "My name is {$name}";
-echo "\n";
+echo PHP_EOL;
 printf("My name is %s", $name);
-echo "\n";
+echo PHP_EOL;
 
 // sprintf()  [data return kore]
 $output = sprintf("My name is %s", $name);
 echo $output;
-echo "\n";
+echo PHP_EOL;
 echo strtoupper($output);
-echo "\n";
+echo PHP_EOL;
 echo strtolower($output);
-
-
-
-
-
-
-
-
