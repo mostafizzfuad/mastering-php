@@ -1,11 +1,6 @@
 <?php
 
 
-/////////////////// *** global keyword *** ///////////////////
-
-/////////////////// *** global keyword *** ///////////////////
-
-
 /////////////////// *** using static keyword *** ///////////////////
 function staticKeyword() {
     static $x = 0;
